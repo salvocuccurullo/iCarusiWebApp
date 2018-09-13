@@ -7,15 +7,22 @@ angular.
     controller: function MoviesListController() {
       this.movies = [
         {
-          name: 'Atypical season 2',
-          media: 'Netflix'
-        }, {
-          name: 'El autor',
-          media: 'Netflix'
-        }, {
           name: 'Kobra Kai',
           media: 'YouTube Premium'
+        },
+        {
+          name: 'Atypical season 2',
+          media: 'Netflix'
+        }, 
+        {
+          name: 'Mozart in the Jungle',
+          media: 'Amazon Video'
+        },
+        {
+          name: 'El Autor',
+          media: 'Netflix'
         }
       ];
+      this.orderProp = 'name';
     }
   });
