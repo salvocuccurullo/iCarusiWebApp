@@ -11,23 +11,26 @@
 			<p>
 				Sort by:
 				<select ng-model="$ctrl.orderProp">
-					<option value="name">Title</option>
+					<option value="title">Title</option>
 					<option value="media">Media</option>
+					<option value="username">User</option>
 				</select>
 			</p>
 
+			<p>
+				Total number of movies: {{$ctrl.movies.length}}
+			</p>
 		</div>
 		
 		<div class="col-md-10">
 			<!--Body content-->
-
 			<ul class="phones">
 				<li ng-repeat="movie in $ctrl.movies | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-					<span>{{movie.name}}</span>
-					<p>{{movie.media}}</p>
+					<span>{{movie.title}}</span>
+					<p>{{movie.media}}<br/>
+					{{movie.username}}</p>
 				</li>
 			</ul>
-			Total number of movies: {{$ctrl.movies.length}}
 		</div>
 		
 	</div>
